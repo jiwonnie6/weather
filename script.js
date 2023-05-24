@@ -3,9 +3,8 @@ require('dotenv').config()
 // get API key from envrioment variable
 const API_KEY = process.env.API_KEY;
 
-// assigning references to HTML elements
+// get DOM elements
 const searchButton = document.getElementById('searchButton')
-// const cityName = document.getElementById('cityName')
 const weatherDescription = document.getElementById('weatherDescription')
 const weatherInformation = document.getElementById('weatherInformation')
 const weatherImage = document.getElementById('weatherImage')
@@ -34,7 +33,7 @@ const showWeatherData = (weatherData) => {
   // extracting various weather information
   const description = `${weatherData.weather[0].main}`
   const cityTemp = `${Math.ceil(weatherData.main.temp)}\xB0`
-  
+
 
   // display weather information titles and values
   const allWeatherInfoTitles = ['Current Temp: ', 'Min temp: ', 'Max temp: ']
